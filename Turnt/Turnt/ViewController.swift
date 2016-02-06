@@ -40,17 +40,17 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func logUserData(){
-        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        let graphRequest = FBSDKGraphRequest(graphPath: "me/friends", parameters: nil)
         graphRequest.startWithCompletionHandler{(connection,result,error)-> Void in
             if error != nil{
                 print(error)
             }
             else{
                 print(result)
+                
             }
         }
     }
-
 
 }
 
