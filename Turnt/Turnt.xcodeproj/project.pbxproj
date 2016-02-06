@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B1A4A21C66A7640061AC20 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1A4A11C66A7640061AC20 /* MapView.swift */; };
 		5225173F149F045DC9DF3D98 /* Pods_Turnt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD4700B9C4CB6D8F9684405 /* Pods_Turnt.framework */; };
 		9BC65E5B1C66308100A9DC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */; };
 		9BC65E5D1C66308100A9DC09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC65E5C1C66308100A9DC09 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0DE066F80C3DECCE22016827 /* Pods-Turnt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turnt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Turnt/Pods-Turnt.release.xcconfig"; sourceTree = "<group>"; };
+		27B1A4A11C66A7640061AC20 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../MapView.swift; sourceTree = "<group>"; };
 		6DD4700B9C4CB6D8F9684405 /* Pods_Turnt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turnt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC65E571C66308100A9DC09 /* Turnt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turnt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		9BC65E591C66308100A9DC09 /* Turnt */ = {
 			isa = PBXGroup;
 			children = (
+				27B1A4A11C66A7640061AC20 /* MapView.swift */,
 				9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */,
 				9BC65E5C1C66308100A9DC09 /* ViewController.swift */,
 				9BC65E5E1C66308100A9DC09 /* Main.storyboard */,
@@ -135,6 +138,7 @@
 				TargetAttributes = {
 					9BC65E561C66308100A9DC09 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3GEVCW7UG5;
 					};
 				};
 			};
@@ -223,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC65E5D1C66308100A9DC09 /* ViewController.swift in Sources */,
+				27B1A4A21C66A7640061AC20 /* MapView.swift in Sources */,
 				9BC65E5B1C66308100A9DC09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +342,8 @@
 			baseConfigurationReference = E513941A169F8F27CA82EC33 /* Pods-Turnt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Turnt",
@@ -345,6 +352,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Turnt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -353,6 +361,8 @@
 			baseConfigurationReference = 0DE066F80C3DECCE22016827 /* Pods-Turnt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Turnt",
@@ -361,6 +371,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Turnt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
