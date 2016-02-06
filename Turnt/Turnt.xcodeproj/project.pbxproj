@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5225173F149F045DC9DF3D98 /* Pods_Turnt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD4700B9C4CB6D8F9684405 /* Pods_Turnt.framework */; };
 		9BC65E5B1C66308100A9DC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */; };
 		9BC65E5D1C66308100A9DC09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC65E5C1C66308100A9DC09 /* ViewController.swift */; };
 		9BC65E601C66308100A9DC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC65E5E1C66308100A9DC09 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE066F80C3DECCE22016827 /* Pods-Turnt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turnt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Turnt/Pods-Turnt.release.xcconfig"; sourceTree = "<group>"; };
+		6DD4700B9C4CB6D8F9684405 /* Pods_Turnt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turnt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC65E571C66308100A9DC09 /* Turnt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turnt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BC65E5C1C66308100A9DC09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		9BC65E6C1C6630E700A9DC09 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		9BC65E6D1C6630E700A9DC09 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		9BC65E6E1C6630E700A9DC09 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		E513941A169F8F27CA82EC33 /* Pods-Turnt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turnt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Turnt/Pods-Turnt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +42,29 @@
 				9BC65E701C6630E700A9DC09 /* FBSDKLoginKit.framework in Frameworks */,
 				9BC65E6F1C6630E700A9DC09 /* FBSDKCoreKit.framework in Frameworks */,
 				9BC65E711C6630E700A9DC09 /* FBSDKShareKit.framework in Frameworks */,
+				5225173F149F045DC9DF3D98 /* Pods_Turnt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53347C5FD5A56687520973E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E513941A169F8F27CA82EC33 /* Pods-Turnt.debug.xcconfig */,
+				0DE066F80C3DECCE22016827 /* Pods-Turnt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9BC65E4E1C66308100A9DC09 = {
 			isa = PBXGroup;
 			children = (
 				9BC65E591C66308100A9DC09 /* Turnt */,
 				9BC65E581C66308100A9DC09 /* Products */,
+				53347C5FD5A56687520973E2 /* Pods */,
+				D139F7C34C7A233033EB180B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +92,14 @@
 			path = Turnt;
 			sourceTree = "<group>";
 		};
+		D139F7C34C7A233033EB180B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DD4700B9C4CB6D8F9684405 /* Pods_Turnt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BC65E691C66308200A9DC09 /* Build configuration list for PBXNativeTarget "Turnt" */;
 			buildPhases = (
+				3931EE24A842427EC92E1402 /* Check Pods Manifest.lock */,
 				9BC65E531C66308100A9DC09 /* Sources */,
 				9BC65E541C66308100A9DC09 /* Frameworks */,
 				9BC65E551C66308100A9DC09 /* Resources */,
+				6E928AFA669812D19895D8CF /* Embed Pods Frameworks */,
+				6AC25AE4A3198A0543D6F55C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3931EE24A842427EC92E1402 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC25AE4A3198A0543D6F55C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Turnt/Pods-Turnt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E928AFA669812D19895D8CF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Turnt/Pods-Turnt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9BC65E531C66308100A9DC09 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		9BC65E6A1C66308200A9DC09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E513941A169F8F27CA82EC33 /* Pods-Turnt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -274,6 +350,7 @@
 		};
 		9BC65E6B1C66308200A9DC09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE066F80C3DECCE22016827 /* Pods-Turnt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -306,6 +383,7 @@
 				9BC65E6B1C66308200A9DC09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

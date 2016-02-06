@@ -1,4 +1,5 @@
 import requests
+import json
 from flask import Flask,jsonify,redirect,request
 from rauth import OAuth2Service
 from flask.ext.pymongo import PyMongo
@@ -15,12 +16,12 @@ mongo = PyMongo(app,config_prefix='MONGO')
 
 @app.route('/api/create',methods=['POST','GET'])
 def create():
-	#data = json.loads(request.data)
-	activity = {'activity': { 'curr_lat':'', 'curr_long':'', 'turnt_level':'', 'activity':'','dest_lat':'' ,'dest_long':'' ,'joined':''} }
-	fb_id = "lauren"
-	friends = ""
-	newuser = mongo.db.users.insert_one({'fb_id':fb_id,'friends':friends,'activity':activity})
-	return jsonify({'result':newuser})
+	#fb_id 
+	#save if it doesnt exit and return exits or not
+	data = json.loads(request.data)
+	blob = {'name':data["name"],'friends':[],'fb_id':fb_id,'activity': { 'curr_lat':'', 'curr_long':'', 'turnt_level':'', 'activity':'','dest_lat':'' ,'dest_long':'' ,'joined':''} }
+	newuser = mongo.db.users.insert_one({'user':blob})
+	return jsonify({'result':"done"})
 
 @app.route('/api/find',methods=['POST','GET'])
 def find():
@@ -95,6 +96,53 @@ def submit():
 	return jsonify({'userdata':userdata,'ubers':uberdata})
 
 
+# '''        
+    #     let postsEndpoint: String = "http://songathon.xyz/api/register"
+    #     let newPost = ["username": theusername,"password": thepassword, "email": theemail]
+        
+    #     Alamofire.request(.POST, postsEndpoint, parameters: newPost, encoding: .JSON)
+    #         .responseJSON { response in
+    #             do {
+    #                 if let _ = NSString(data:response.data!, encoding: NSUTF8StringEncoding) {
+    #                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(response.data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+    #                     let theuser = jsonDictionary["user"] as! String
+    #                     if(theuser.isEmpty){
+    #                         //alert bad login
+    #                         self.displayAlert("Username taken")
+    #                         return
+    #                     }
+    #                     else{
+    #                         //registered correctly
+    #                         let myAlert = UIAlertController(title: "Alert", message: "You are Registered", preferredStyle: UIAlertControllerStyle.Alert)
+    #                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+    #                             self.dismissViewControllerAnimated(true, completion: nil)
+    #                         }
+    #                         myAlert.addAction(okAction)
+    #                         self.presentViewController(myAlert,animated: true,completion: nil)
+    #                     }
+    #                 }
+    #             } catch {
+    #                 print("bad things happened")
+    #             }
+    #     }
+        
+    # }
+    
+#     func displayAlert(txt: String){
+#         let myAlert = UIAlertController(title: "Alert", message: txt, preferredStyle: UIAlertControllerStyle.Alert)
+#         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+#         myAlert.addAction(okAction)
+#         self.presentViewController(myAlert, animated: true, completion: nil)
+        
+#     }
+#    Alamofire.request(.POST, postsEndpoint, parameters: newPost, encoding: .JSON)
+#             .responseJSON { response in
+            
+#             self.performSegueWithIdentifier("streamView", sender: self )
+
+#         }
+
+#     '''
 
 
 if __name__ == "__main__":
