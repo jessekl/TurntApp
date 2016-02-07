@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7331CF90A3A5FAE911D8CDAE'
-               BlueprintName = 'Pods-Turnt'
+               BlueprintIdentifier = '110B9C81799E14222DCE7EC5'
+               BlueprintName = 'UberRides'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Turnt.framework'>
+               BuildableName = 'UberRides.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

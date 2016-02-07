@@ -14,13 +14,14 @@ import Alamofire
 import SwiftyJSON
 
 
+
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let loginButton = FBSDKLoginButton()
+     let loginButton = FBSDKLoginButton()
         loginButton.center = self.view.center
+        
         loginButton.readPermissions=["user_friends","public_profile","email"]
         self.view.addSubview(loginButton)
         loginButton.delegate = self

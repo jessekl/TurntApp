@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import UberRides
 import CoreLocation
 
 
@@ -27,13 +28,18 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
+        self.mapView.delegate = self;
+        self.navigationController?.navigationBarHidden = true
         
+        //loop through all friends lat and long and plot activiy
         let newYorkLocation = CLLocationCoordinate2DMake(40.730872, -74.003066)
         // Drop a pin
         let dropPin = MKPointAnnotation()
+        let pinView = MKAnnotationView()
         dropPin.coordinate = newYorkLocation
         dropPin.title = "New York City"
         self.navigationController?.navigationBarHidden = true
+        pinView.annotation = dropPin
         mapView.addAnnotation(dropPin)
     }
 
@@ -55,13 +61,60 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     }
     
   
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print("hello")
-        
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        var latlon = [Double]()
+        if let x = view.annotation?.coordinate.latitude{
+            latlon.append(x)
+        }
+        if let y = view.annotation?.coordinate.longitude{
+            latlon.append(y)
+        }
+        NSUserDefaults.standardUserDefaults().setObject(latlon, forKey: "current")
+        NSUserDefaults.standardUserDefaults().synchronize()
         self.navigationController?.navigationBarHidden = false
     }
     
+    func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKPinAnnotationView()
+        annotationView.canShowCallout = true
+        return annotationView
+        
+    }
+ 
+    
+    @IBAction func gpsTap(sender: AnyObject) {
+        let latlon = NSUserDefaults.standardUserDefaults().objectForKey("current") as! NSArray
 
+        let latitute:CLLocationDegrees =  latlon[0].doubleValue
+        let longitute:CLLocationDegrees =  latlon[1].doubleValue
+        
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitute, longitute)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        //mapItem.name = "\(self.venueName)"
+        mapItem.openInMapsWithLaunchOptions(options)
+
+    }
+
+    @IBAction func uberTap(sender: AnyObject) {
+        let button = RequestButton()
+        //view.addSubview(button)
+        // Swift
+        button.setProductID("abc123-productID")
+        button.setPickupLocation(latitude: 37.770, longitude: -122.466, nickname: "California Academy of Sciences")
+        button.setDropoffLocation(latitude: 37.791, longitude: -122.405, nickname: "Pier 39")
+        button.uberButtonTapped(button)
+    }
     /*
     // MARK: - Navigation
 

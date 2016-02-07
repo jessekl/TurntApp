@@ -19,20 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UberRides.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>24EF2A74B5722BBDA2D4936E30D09AFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D395A0A4515204CA7F2FCBCD307A381E</key>
+		<key>6B04D98E878E319E0539EB2A61099CA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDC5C90250F2DE1C9ABAF92123AACDEB</key>
+		<key>7FB2BABF473EA4034F9D122F9A4A3687</key>
 		<dict>
 			<key>primary</key>
 			<true/>

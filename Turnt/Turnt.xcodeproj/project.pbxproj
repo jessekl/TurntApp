@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		27B1A4A21C66A7640061AC20 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1A4A11C66A7640061AC20 /* MapView.swift */; };
 		5225173F149F045DC9DF3D98 /* Pods_Turnt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD4700B9C4CB6D8F9684405 /* Pods_Turnt.framework */; };
+		9B5FE08B1C66FDA10013D722 /* KnobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5FE08A1C66FDA10013D722 /* KnobViewController.swift */; };
+		9B634DC61C67076700FCB1C2 /* WheelSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B634DC51C67076700FCB1C2 /* WheelSlider.swift */; };
 		9BC65E5B1C66308100A9DC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */; };
 		9BC65E5D1C66308100A9DC09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC65E5C1C66308100A9DC09 /* ViewController.swift */; };
 		9BC65E601C66308100A9DC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC65E5E1C66308100A9DC09 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		0DE066F80C3DECCE22016827 /* Pods-Turnt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turnt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Turnt/Pods-Turnt.release.xcconfig"; sourceTree = "<group>"; };
 		27B1A4A11C66A7640061AC20 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../MapView.swift; sourceTree = "<group>"; };
 		6DD4700B9C4CB6D8F9684405 /* Pods_Turnt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turnt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B5FE08A1C66FDA10013D722 /* KnobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobViewController.swift; sourceTree = "<group>"; };
+		9B634DC51C67076700FCB1C2 /* WheelSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelSlider.swift; sourceTree = "<group>"; };
 		9BC65E571C66308100A9DC09 /* Turnt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turnt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BC65E5C1C66308100A9DC09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,10 +85,12 @@
 		9BC65E591C66308100A9DC09 /* Turnt */ = {
 			isa = PBXGroup;
 			children = (
+				9B634DC51C67076700FCB1C2 /* WheelSlider.swift */,
 				27B1A4A11C66A7640061AC20 /* MapView.swift */,
 				9BC65E5A1C66308100A9DC09 /* AppDelegate.swift */,
 				9BC65E5C1C66308100A9DC09 /* ViewController.swift */,
 				9BC65E5E1C66308100A9DC09 /* Main.storyboard */,
+				9B5FE08A1C66FDA10013D722 /* KnobViewController.swift */,
 				9BC65E611C66308200A9DC09 /* Assets.xcassets */,
 				9BC65E631C66308200A9DC09 /* LaunchScreen.storyboard */,
 				9BC65E661C66308200A9DC09 /* Info.plist */,
@@ -138,7 +144,7 @@
 				TargetAttributes = {
 					9BC65E561C66308100A9DC09 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3GEVCW7UG5;
+						DevelopmentTeam = SKULBG8EJC;
 					};
 				};
 			};
@@ -226,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B634DC61C67076700FCB1C2 /* WheelSlider.swift in Sources */,
+				9B5FE08B1C66FDA10013D722 /* KnobViewController.swift in Sources */,
 				9BC65E5D1C66308100A9DC09 /* ViewController.swift in Sources */,
 				27B1A4A21C66A7640061AC20 /* MapView.swift in Sources */,
 				9BC65E5B1C66308100A9DC09 /* AppDelegate.swift in Sources */,
