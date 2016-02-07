@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h3G-NJ-A1S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PNc-nN-Gm2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="203" y="180"/>
         </scene>
-        <!--Current Location-->
+        <!--Map View-->
         <scene sceneID="yDW-ko-wqS">
             <objects>
                 <viewController id="h3G-NJ-A1S" customClass="MapView" customModule="Turnt" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,11 +33,11 @@
                         <viewControllerLayoutGuide type="bottom" id="9Gu-l3-86H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T49-7S-zIt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EOy-dS-zjG">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EOy-dS-zjG">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,8 +48,15 @@
                             <constraint firstItem="EOy-dS-zjG" firstAttribute="bottom" secondItem="9Gu-l3-86H" secondAttribute="top" id="SYc-pf-CNQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Current Location" id="VhY-RU-ofO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationItem key="navigationItem" id="VhY-RU-ofO">
+                        <barButtonItem key="leftBarButtonItem" image="MapButton" id="S2a-Ad-NU9">
+                            <color key="tintColor" red="0.79809816919191923" green="0.071986714372840738" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="UberButton" id="7uW-qw-O0K">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="mapView" destination="EOy-dS-zjG" id="i54-uP-YIs"/>
                     </connections>
@@ -57,6 +64,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZA8-mE-DiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055" y="180"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZrJ-sb-GRv">
+            <objects>
+                <viewController id="ZM9-FP-M22" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KyN-q5-oVw"/>
+                        <viewControllerLayoutGuide type="bottom" id="USO-qG-JDd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sVf-IX-juM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hj-6D-mV0">
+                                <rect key="frame" x="109" y="188" width="103" height="30"/>
+                                <state key="normal" title="Uber Me There"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-xU-Zhp">
+                                <rect key="frame" x="95" y="274" width="130" height="30"/>
+                                <state key="normal" title="Give Me Directions"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBG-ni-74P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440" y="180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1ZS-z9-2XJ">
@@ -78,4 +114,8 @@
             <point key="canvasLocation" x="594" y="180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MapButton" width="55" height="45"/>
+        <image name="UberButton" width="60" height="45"/>
+    </resources>
 </document>

@@ -13,6 +13,8 @@ import CoreLocation
 
 class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
+    var destination: MKMapItem?
+    
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -25,6 +27,14 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
+        
+        let newYorkLocation = CLLocationCoordinate2DMake(40.730872, -74.003066)
+        // Drop a pin
+        let dropPin = MKPointAnnotation()
+        dropPin.coordinate = newYorkLocation
+        dropPin.title = "New York City"
+        self.navigationController?.navigationBarHidden = true
+        mapView.addAnnotation(dropPin)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +54,12 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         print("Errors: " + error.localizedDescription)
     }
     
-    
+  
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print("hello")
+        
+        self.navigationController?.navigationBarHidden = false
+    }
     
 
     /*
