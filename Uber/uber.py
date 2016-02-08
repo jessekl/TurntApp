@@ -19,9 +19,20 @@ def create():
 	#fb_id 
 	#save if it doesnt exit and return exits or not
 	data = json.loads(request.data)
-	blob = {'name':data["name"],'friends':[],'fb_id':fb_id,'activity': { 'curr_lat':'', 'curr_long':'', 'turnt_level':'', 'activity':'','dest_lat':'' ,'dest_long':'' ,'joined':''} }
+	blob = {'name':'','friends':[],'fb_id':str(data['fb_id']),'activity': { 'curr_lat':'', 'curr_long':'', 'turnt_level':'', 'activity':'','dest_lat':'' ,'dest_long':'' ,'joined':''} }
 	newuser = mongo.db.users.insert_one({'user':blob})
 	return jsonify({'result':"done"})
+
+@app.route('/api/post/activities',methods=['POST','GET'])
+def act():
+    data = json.loads(request.data)
+    print data
+    mongo.db.users.update_one({'fb_id':data['fb_id']},{'$set':{'activity':{'dest_long':data['long'],'dest_lat':data['lat']}}})
+    #save activity
+    #query all activities
+    pass
+
+
 
 @app.route('/api/find',methods=['POST','GET'])
 def find():

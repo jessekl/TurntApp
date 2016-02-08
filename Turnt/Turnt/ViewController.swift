@@ -34,7 +34,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        print("logged in")
+        //save user data locally, fb_id
+        performSegueWithIdentifier("toInitView", sender: self )
         UserData()
     }
     
@@ -52,6 +53,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 print(result)
                 let postsEndpoint: String = "http://songathon.xyz/api/create"
                 let newPost = ["fb_id": result["id"]]
+                NSUserDefaults.standardUserDefaults().setObject(result["id"], forKey: "user_id")
+                NSUserDefaults.standardUserDefaults().synchronize()
                 Alamofire.request(.POST, postsEndpoint, parameters: newPost, encoding: .JSON)
                     .responseJSON { response in
                         do {
@@ -64,17 +67,19 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         }
                 }
             }
-//        
-//        let graphRequest = FBSDKGraphRequest(graphPath: "me/friends", parameters: nil)
-//        graphRequest.startWithCompletionHandler{(connection,result,error)-> Void in
-//            if error != nil{
-//                print(error)
-//            }
-//            else{
-//             
-//                
-//            }
-//        }
+        //save friends fb_ids to find all activitys and save 
+            //array of lat,lon,title,
+        let graphRequest = FBSDKGraphRequest(graphPath: "me/friends", parameters: nil)
+        graphRequest.startWithCompletionHandler{(connection,result,error)-> Void in
+            if error != nil{
+                print(error)
+            }
+            else{
+                NSUserDefaults.standardUserDefaults().setObject(result["data"], forKey: "friends")
+                NSUserDefaults.standardUserDefaults().synchronize()
+
+            }
+        }
         }
     }
 }

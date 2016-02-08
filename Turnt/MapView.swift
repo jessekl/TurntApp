@@ -41,6 +41,46 @@ class MapView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         self.navigationController?.navigationBarHidden = true
         pinView.annotation = dropPin
         mapView.addAnnotation(dropPin)
+        // Drop a pin
+        let madso = CLLocationCoordinate2DMake(41.730872, -70.003066)
+        let dropPin2 = MKPointAnnotation()
+        let pinView2 = MKAnnotationView()
+        dropPin2.coordinate = madso
+        dropPin2.title = "a"
+        pinView2.annotation = dropPin2
+        mapView.addAnnotation(dropPin2)
+        // Drop a pin
+           let madso2 = CLLocationCoordinate2DMake(31.730872, -75.003066)
+        let dropPin3 = MKPointAnnotation()
+        let pinView3 = MKAnnotationView()
+        dropPin3.coordinate = madso2
+        dropPin3.title = "b"
+        pinView3.annotation = dropPin3
+        mapView.addAnnotation(dropPin3)
+        // Drop a pin
+        let madso4 = CLLocationCoordinate2DMake(31.730872, -40.003066)
+        let dropPin4 = MKPointAnnotation()
+        let pinView4 = MKAnnotationView()
+        dropPin4.coordinate = madso4
+        dropPin4.title = "c"
+        pinView4.annotation = dropPin4
+        mapView.addAnnotation(dropPin4)
+        // Drop a pin
+        let madso5 = CLLocationCoordinate2DMake(44.730872, -77.003066)
+        let dropPin6 = MKPointAnnotation()
+        let pinView6 = MKAnnotationView()
+        dropPin6.coordinate = madso5
+        dropPin6.title = "d"
+        pinView6.annotation = dropPin6
+        mapView.addAnnotation(dropPin6)
+        // Drop a pin
+        let madso8 = CLLocationCoordinate2DMake(31.730872, -40.003066)
+        let dropPin9 = MKPointAnnotation()
+        let pinView9 = MKAnnotationView()
+        dropPin9.coordinate = madso8
+        dropPin9.title = "e"
+        pinView9.annotation = dropPin9
+        mapView.addAnnotation(dropPin)
     }
 
     override func didReceiveMemoryWarning() {

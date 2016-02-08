@@ -7,6 +7,7 @@ target 'Turnt' do
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'Alamofire', '~> 3.0'
     pod 'UberRides'
+    pod 'SnappingStepper', '~> 2.1.0'
 
 end
 

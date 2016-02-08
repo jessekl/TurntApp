@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7331CF90A3A5FAE911D8CDAE'
+               BlueprintIdentifier = '37F47862765EBF9C208A0B82'
                BlueprintName = 'Pods-Turnt'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Turnt.framework'>

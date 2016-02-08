@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SnappingStepper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24EF2A74B5722BBDA2D4936E30D09AFE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B04D98E878E319E0539EB2A61099CA5</key>
+		<key>7E10D081C32E24867909CD78F77C9447</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FB2BABF473EA4034F9D122F9A4A3687</key>
+		<key>DB00FF9EC3377D81F95EA4A63C515D1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E50DB83F66D3F960410DAC2DDECCB9C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F19C76F86E260EB05C70CE672B7CA594</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,10 +1,12 @@
 PODS:
   - Alamofire (3.1.5)
+  - SnappingStepper (2.1.0)
   - SwiftyJSON (2.3.2)
   - UberRides (0.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
+  - SnappingStepper (~> 2.1.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - UberRides
 
@@ -19,6 +21,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  SnappingStepper: 7378b2672b43f14ac9df400f414d44ce603b6aec
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   UberRides: 6ce7697fcb04231865eda938c84bcf0104e65d9e
 

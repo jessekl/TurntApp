@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Turnt/Alamofire.framework"
+  install_framework "Pods-Turnt/SnappingStepper.framework"
   install_framework "Pods-Turnt/SwiftyJSON.framework"
   install_framework "Pods-Turnt/UberRides.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Turnt/Alamofire.framework"
+  install_framework "Pods-Turnt/SnappingStepper.framework"
   install_framework "Pods-Turnt/SwiftyJSON.framework"
   install_framework "Pods-Turnt/UberRides.framework"
 fi

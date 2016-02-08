@@ -54,6 +54,7 @@
 			</array>
 		</dict>
 	</array>
+    
 	<key>FacebookAppID</key>
 	<string>959824274087195</string>
 	<key>FacebookDisplayName</key>
@@ -63,16 +64,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+    
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+        <string>uber</string>
 		<string>fbapi</string>
 		<string>fb-messenger-api</string>
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>uber</string>
-    </array>
+    
+    
 </dict>
 </plist>
