@@ -12,13 +12,20 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import FBSDKShareKit
 import Alamofire
-class KnobViewController: UIViewController{
+
+class KnobViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var num: UILabel!
     var stepper = SnappingStepper(frame: CGRectMake(0, 0, 350, 150))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loginButton = FBSDKLoginButton()
+        loginButton.center = self.view.center
+        
+        loginButton.readPermissions=["user_friends","public_profile","email"]
+        self.view.addSubview(loginButton)
+        loginButton.delegate = self
         
         // Configure the stepper like any other UIStepper. For example:
         //
@@ -47,9 +54,18 @@ class KnobViewController: UIViewController{
         //    println("value: \(value)")
         // }
         
-        self.view.addSubview(stepper)
+        //self.view.addSubview(stepper)
     }
     
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        //redirect to homepa
+        print("logged out")
+    }
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        //save user data locally, fb_id
+        
+    }
+
     @IBAction func mapTap(sender: AnyObject) {
         performSegueWithIdentifier("toMapFromActivity", sender: self )
     }
