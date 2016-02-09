@@ -8,16 +8,32 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-Turnt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SnappingStepper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>UberRides.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -27,7 +43,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7E10D081C32E24867909CD78F77C9447</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D395A0A4515204CA7F2FCBCD307A381E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB00FF9EC3377D81F95EA4A63C515D1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E50DB83F66D3F960410DAC2DDECCB9C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F19C76F86E260EB05C70CE672B7CA594</key>
 		<dict>
 			<key>primary</key>
 			<true/>
